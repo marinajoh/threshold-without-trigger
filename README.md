@@ -64,11 +64,13 @@ instructions. The dataset is not included in this repository.
 
 Run the R scripts in `R/` in numbered order:
 
-1. `01_clean_data.R` - Loads and cleans the DCID dataset
-2. `02_dag.R` - Generates the directed acyclic graph for the analysis
+1. `01_dag.R` - Generates the directed acyclic graph for the analysis
+2. `02_clean_data.R` - Loads and cleans the DCID dataset
 3. `03_modeltest.R` - Model comparison and prior diagnostics
 4. `04_regression.R` - Bayesian negative binomial regression analyses
 5. `05_descriptive.R` - Descriptive compositional analyses
+
+`01_dag.R` produces a figure that is independent of the cleaned data and could be run at any time. The numbering reflects the analytical workflow, with `02_clean_data.R` preparing the analysis data, `03_modeltest.R` establishing the model specification used in `04_regression.R`, and `05_descriptive.R` producing the compositional analyses. Note that `03_modeltest.R` and `04_regression.R` run Bayesian models via MCMC and may take several minutes to complete.
 
 ## Citation
 
